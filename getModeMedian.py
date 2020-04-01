@@ -2,19 +2,19 @@
 import random
 def getModeMedian():
     list_1=[]
-    n=random.randint(3, 10)#dizi uzunluğu
-    r_min=-4#dizinin içinde yer alabilecek en küçük değer
-    r_max=4#dizinin içinde yer alabilecek en büyük değer
+    n=random.randint(3, 10)#dizi uzunluÃ°u
+    r_min=-4#dizinin iÃ§inde yer alabilecek en kÃ¼Ã§Ã¼k deÃ°er
+    r_max=4#dizinin iÃ§inde yer alabilecek en bÃ¼yÃ¼k deÃ°er
     
-    #Diziye rastgele değer atanması
-    #karmaşıklık O(n)
+    #Diziye rastgele deÃ°er atanmasÃ½
+    #karmaÃ¾Ã½klÃ½k O(n)
     for i in range(n):
         list_1.append(random.randint(r_min,r_max))
     print ("liste", list_1)
     
     
-    #Dizinin histogram değerinin hesaplanması
-    #Karmaşıklık O(n*n)
+    #Dizinin histogram deÃ°erinin hesaplanmasÃ½
+    #KarmaÃ¾Ã½klÃ½k O(n*n)
     histogram_list=[]
     for i in range(len(list_1)):
         s=False
@@ -27,8 +27,8 @@ def getModeMedian():
     
     print("histogram_list", histogram_list)
     
-    #Dizinin mod hesabının yapılması
-    #Karmaşıklık O(n)
+    #Dizinin mod hesabÃ½nÃ½n yapÃ½lmasÃ½
+    #KarmaÃ¾Ã½klÃ½k O(n)
     frekans_max = -1
     mod = -1
     for item, frekans in histogram_list:
@@ -38,8 +38,8 @@ def getModeMedian():
            mod = item
     print("mod", mod, "max_f", frekans_max)
 
-    #Dizinin buble sort ile sıralanması
-    #Karmaşıklık O(n*n)
+    #Dizinin buble sort ile sÃ½ralanmasÃ½
+    #KarmaÃ¾Ã½klÃ½k O(n*n)
     m = len(list_1)
     for i in range(m-1, -1, -1):
         for j in range(0, i):
@@ -50,8 +50,8 @@ def getModeMedian():
     print(list_1)
     
     
-    #Dizinin median hesabının yapılması
-    #Yukarıda sıralanan diziyi kullanacağımız için karmaşıklıkk O(n)
+    #Dizinin median hesabÃ½nÃ½n yapÃ½lmasÃ½
+    #YukarÃ½da sÃ½ralanan diziyi kullanacaÃ°Ã½mÃ½z iÃ§in karmaÃ¾Ã½klÃ½kk O(n)
     
     if(m % 2 == 1):
         ortanca = int(m/2) 
@@ -63,5 +63,4 @@ def getModeMedian():
         median = (ort_1 + ort_2) / 2
         print("Median = ", median)
     
-    return mod, median            
-getModeMedian()
+    return mod, median   
